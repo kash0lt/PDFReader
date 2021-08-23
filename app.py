@@ -15,7 +15,7 @@ logo_label.grid(column=1, row=0)
 
 # instructions
 instructions = tk.Label(
-    rootwindow, text="Select a PDF file on your computer to extract page 1 text", font="Arial")
+    rootwindow, text="Select a PDF file on your computer to extract page 1 text", font=("Arial",10))
 instructions.grid(columnspan=3, column=0, row=1)
 
 
@@ -37,7 +37,7 @@ def open_pdfFile():
 
 # browse button
 browsetext = tk.StringVar()
-browse_btn = tk.Button(rootwindow, textvariable=browsetext, command=lambda: open_pdfFile(), font="Arial", bg="#20bebe", fg="white",
+browse_btn = tk.Button(rootwindow, textvariable=browsetext, command=lambda: open_pdfFile(), font="Arial", bg="#2060dd", fg="white",
                        height=2, width=15)
 browsetext.set("Browse")
 browse_btn.grid(column=1, row=2)
