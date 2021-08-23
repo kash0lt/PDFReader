@@ -5,8 +5,8 @@ from tkinter.filedialog import askopenfile
 
 rootwindow = tk.Tk()
 rootwindow.title('PDFReader App')
-topcanvas = tk.Canvas(rootwindow, width=300, height=300)
-topcanvas.grid(columnspan=3, rowspan=4)   # three columns
+topcanvas = tk.Canvas(rootwindow, width=500, height=500)
+topcanvas.grid(columnspan=3, rowspan=6)   # three columns
 
 # logo
 logo = ImageTk.PhotoImage(Image.open('logo.png'))
@@ -41,11 +41,8 @@ browse_btn = tk.Button(rootwindow, textvariable=browsetext, command=lambda: open
                        height=2, width=15)
 browsetext.set("Browse")
 browse_btn.grid(column=1, row=2)
-# add more space at the bottom for the Text results
-bottomcanvas = tk.Canvas(rootwindow, width=600, height=250)
-bottomcanvas.grid(columnspan=3)   # three columns
 # text Box for PDF
 text_box = tk.Text(rootwindow, height=10, width=50, padx=15, pady=15)
-text_box.grid(column=1, row=4)
+text_box.grid(column=1, row=3)
 
 rootwindow.mainloop()
